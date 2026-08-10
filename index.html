@@ -30,7 +30,7 @@
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav) + 24px)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.001ms !important}}
 body{margin:0;background:var(--paper);color:var(--ink);
-  font-family:var(--sans);font-size:18.5px;line-height:1.72;-webkit-font-smoothing:antialiased}
+  font-family:var(--sans);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;left:0;top:0;bottom:0;width:5px;background:var(--spine);z-index:60}
 @media (max-width:720px){body::before{width:3px}}
 
@@ -61,8 +61,8 @@ a:hover{color:var(--spine);text-decoration-color:var(--spine)}
 .lang-switch:hover{border-color:var(--spine);color:var(--spine)}
 
 /* 히어로 */
-.hero{padding-block:var(--s24) var(--s16);border-bottom:1px solid var(--line-soft)}
-@media (max-width:720px){.hero{padding-block:var(--s12) var(--s8)}}
+.hero{padding-block:var(--s16) var(--s12);border-bottom:1px solid var(--line-soft)}
+@media (max-width:720px){.hero{padding-block:var(--s8) var(--s6)}}
 .hero-name{font-family:var(--serif);font-weight:400;font-size:clamp(3.4rem,9vw,6.2rem);
   line-height:1;letter-spacing:-.03em;margin:0}
 .hero-name .hanja{font-size:.34em;font-weight:400;color:var(--muted);letter-spacing:.08em;
@@ -77,9 +77,9 @@ a:hover{color:var(--spine);text-decoration-color:var(--spine)}
 .btn--primary:hover{background:var(--spine-hover);border-color:var(--spine-hover);color:#fff}
 
 /* 섹션 */
-.section{padding-block:var(--s16);border-bottom:1px solid var(--line-soft)}
+.section{padding-block:var(--s12);border-bottom:1px solid var(--line-soft)}
 .section:last-of-type{border-bottom:none}
-.section-head{display:flex;align-items:baseline;gap:var(--s4);margin-bottom:var(--s8)}
+.section-head{display:flex;align-items:baseline;gap:var(--s4);margin-bottom:var(--s6)}
 .section-head h2{font-family:var(--serif);font-weight:500;font-size:2.2rem;letter-spacing:-.01em;margin:0}
 .section-head .rule{flex:1;height:1px;background:var(--line);transform:translateY(-4px)}
 
@@ -91,16 +91,19 @@ a:hover{color:var(--spine);text-decoration-color:var(--spine)}
 .chip:hover{border-color:var(--ink);color:var(--ink)}
 .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 .pub-year-block{display:grid;grid-template-columns:130px 1fr;gap:0 var(--s8);
-  border-top:1px solid var(--line-soft);padding-top:var(--s6)}
+  border-top:1px solid var(--line-soft);padding-top:var(--s4)}
 .pub-year-block:first-child{border-top:none;padding-top:0}
 .pub-year{position:sticky;top:calc(var(--nav) + 20px);align-self:start;font-family:var(--mono);
   font-size:1.35rem;font-weight:500;color:var(--muted);padding-bottom:var(--s8)}
 @media (max-width:900px){.pub-year-block{grid-template-columns:1fr}.pub-year{position:static;padding-bottom:var(--s3)}}
-.pub-list{list-style:none;margin:0;padding:0 0 var(--s8)}
-.pub{padding:var(--s4) 0;border-bottom:1px solid var(--line-soft)}
+.pub-list{list-style:none;margin:0;padding:0 0 var(--s4)}
+.pub{padding:var(--s3) 0;border-bottom:1px solid var(--line-soft)}
 .pub:last-child{border-bottom:none}
 .pub-title{font-family:var(--serif);font-size:1.34rem;font-weight:500;line-height:1.32;
-  margin:0 0 var(--s2)}
+  margin:0 0 var(--s1)}
+.pub-head{display:flex;align-items:baseline;gap:var(--s4)}
+.pub-head .pub-title{flex:1}
+.pub-head .pub-link,.pub-head .status{flex-shrink:0;white-space:nowrap}
 html[lang="ko"] .pub-title{font-family:var(--sans);font-size:1.2rem;font-weight:600}
 /* 제목이 나뉘어야 한다면 부제(— 뒤)에서만 끊습니다 */
 .pub-title .t-main{display:block}
@@ -118,8 +121,10 @@ html[lang="ko"] .pub-title{font-family:var(--sans);font-size:1.2rem;font-weight:
 .pub-link:hover{background:var(--spine);border-color:var(--spine);color:#fff}
 
 /* 연혁 항목 */
-.entry{display:grid;grid-template-columns:180px 1fr;gap:0 var(--s8);padding:var(--s6) 0;
+.entry{display:grid;grid-template-columns:180px 1fr;gap:0 var(--s8);padding:var(--s4) 0;
   border-bottom:1px solid var(--line-soft)}
+.entry--row{padding-block:var(--s3)}
+.entry-row-main .entry-what{font-size:1.05rem}
 .entry:last-child{border-bottom:none}
 @media (max-width:900px){.entry{grid-template-columns:1fr;gap:var(--s1)}}
 .entry-when{font-family:var(--mono);font-size:.9rem;color:var(--muted);padding-top:5px}
@@ -127,7 +132,7 @@ html[lang="ko"] .pub-title{font-family:var(--sans);font-size:1.2rem;font-weight:
 .entry-where{color:var(--muted);font-size:.97rem}
 .entry-note{color:var(--muted);font-size:.92rem;margin-top:var(--s1)}
 
-.cv-block + .cv-block{margin-top:var(--s12)}
+.cv-block + .cv-block{margin-top:var(--s8)}
 .cv-label{font-family:var(--sans);font-size:1.3rem;font-weight:800;color:var(--ink);letter-spacing:.02em;
   display:block;margin-bottom:var(--s4);padding-bottom:var(--s2);border-bottom:1px solid var(--line-soft)}
 .cv-block .eyebrow{display:block;margin-bottom:var(--s4)}
@@ -330,8 +335,8 @@ const D = {
     },
     {
       "org": {
-        "ko": "이랜드그룹",
-        "en": "E-Land Group"
+        "ko": "이랜드그룹(이랜드월드 · 이랜드리테일 · 이랜드파크)",
+        "en": "E-Land Group (E-Land World, E-Land Retail, E-Land Park)"
       },
       "place": {
         "ko": "",
@@ -340,18 +345,30 @@ const D = {
       "roles": [
         {
           "title": {
-            "ko": "– 사내변호사 (이랜드월드 · 이랜드리테일 · 이랜드파크)",
-            "en": "– In-house Counsel (E-Land World, E-Land Retail, E-Land Park)"
+            "ko": "사내변호사",
+            "en": "In-house Counsel"
           },
           "period": {
             "ko": "2013. 4. – 2017. 3.",
             "en": "April 2013 – March 2017"
           }
-        },
+        }
+      ]
+    },
+    {
+      "org": {
+        "ko": "이랜드파크",
+        "en": "E-Land Park"
+      },
+      "place": {
+        "ko": "",
+        "en": "Seoul, Korea"
+      },
+      "roles": [
         {
           "title": {
-            "ko": "– 법무팀장 (이랜드파크)",
-            "en": "– Head of Legal (E-Land Park)"
+            "ko": "법무팀장",
+            "en": "Head of Legal"
           },
           "period": {
             "ko": "2015. 12. – 2017. 3.",
@@ -947,30 +964,27 @@ function renderLedger(){
     <section class="pub-year-block">
       <div class="pub-year">${y}</div>
       <ul class="pub-list">
-        ${list.filter(p => p.year === y).map(p => `
-          <li class="pub">
-            <h3 class="pub-title">${(() => { const s = splitTitle(t(p.title));
-              return `<span class="t-main">${esc(s.main)}</span>` +
-                     (s.sub ? `<span class="t-sub">${s.dash ? "— " : ""}${esc(s.sub)}</span>` : ""); })()}</h3>
+        ${list.filter(p => p.year === y).map(p => {
+          const s = splitTitle(t(p.title));
+          const titleHTML = `<span class="t-main">${esc(s.main)}</span>` +
+            (s.sub ? `<span class="t-sub">${s.dash ? "— " : ""}${esc(s.sub)}</span>` : "");
+          const right = p.url
+            ? `<a class="pub-link" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.linkLabel)}</a>`
+            : (p.status === "forthcoming" ? `<span class="status" data-s="forthcoming">${esc(L("status_forthcoming"))}</span>` : "");
+          return `<li class="pub">
+            <div class="pub-head"><h3 class="pub-title">${titleHTML}</h3>${right}</div>
             <p class="pub-meta">${esc(t(p.venue))} · ${esc(t(p.date))}</p>
-            ${(p.status === "forthcoming" || p.url) ? `<div class="pub-tail">
-              ${p.status === "forthcoming" ? `<span class="status" data-s="forthcoming">${esc(L("status_forthcoming"))}</span>` : ""}
-              ${p.url ? `<a class="pub-link" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.linkLabel)}</a>` : ""}
-            </div>` : ""}
-          </li>`).join("")}
+          </li>`;
+        }).join("")}
       </ul>
     </section>`).join("");
 }
 
 function renderCv(){
-  const rows = (items) => items.map(e => `
-    <div class="entry">
+  const rowInline = (items) => items.map(e => `
+    <div class="entry entry--row">
       <div class="entry-when">${esc(e.when)}</div>
-      <div>
-        <div class="entry-what">${esc(e.what)}</div>
-        ${e.where ? `<div class="entry-where">${esc(e.where)}</div>` : ""}
-        ${e.note ? `<div class="entry-note">${esc(e.note)}</div>` : ""}
-      </div>
+      <div class="entry-row-main"><span class="entry-what">${esc(e.what)}</span>${e.where ? `<span class="entry-where"> / ${esc(e.where)}</span>` : ""}${e.note ? `<div class="entry-note">${esc(e.note)}</div>` : ""}</div>
     </div>`).join("");
 
   const flatten = (groups) => groups.flatMap(g =>
@@ -987,7 +1001,7 @@ function renderCv(){
 
   $("#cvBlocks").innerHTML = blocks
     .filter(b => b.items.length)          // 비면 제목까지 함께 사라집니다
-    .map(b => `<div class="cv-block"><span class="cv-label">${esc(b.label)}</span>${rows(b.items)}</div>`)
+    .map(b => `<div class="cv-block"><span class="cv-label">${esc(b.label)}</span>${rowInline(b.items)}</div>`)
     .join("");
 }
 
