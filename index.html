@@ -61,8 +61,8 @@ a:hover{color:var(--spine);text-decoration-color:var(--spine)}
 .lang-switch:hover{border-color:var(--spine);color:var(--spine)}
 
 /* 히어로 */
-.hero{padding:var(--s24) 0 var(--s16);border-bottom:1px solid var(--line-soft)}
-@media (max-width:720px){.hero{padding:var(--s12) 0 var(--s8)}}
+.hero{padding-block:var(--s24) var(--s16);border-bottom:1px solid var(--line-soft)}
+@media (max-width:720px){.hero{padding-block:var(--s12) var(--s8)}}
 .hero-name{font-family:var(--serif);font-weight:400;font-size:clamp(3.4rem,9vw,6.2rem);
   line-height:1;letter-spacing:-.03em;margin:0}
 .hero-name .hanja{font-size:.34em;font-weight:400;color:var(--muted);letter-spacing:.08em;
@@ -77,7 +77,7 @@ a:hover{color:var(--spine);text-decoration-color:var(--spine)}
 .btn--primary:hover{background:var(--spine-hover);border-color:var(--spine-hover);color:#fff}
 
 /* 섹션 */
-.section{padding:var(--s16) 0;border-bottom:1px solid var(--line-soft)}
+.section{padding-block:var(--s16);border-bottom:1px solid var(--line-soft)}
 .section:last-of-type{border-bottom:none}
 .section-head{display:flex;align-items:baseline;gap:var(--s4);margin-bottom:var(--s8)}
 .section-head h2{font-family:var(--serif);font-weight:500;font-size:2.2rem;letter-spacing:-.01em;margin:0}
@@ -135,7 +135,7 @@ html[lang="ko"] .pub-title{font-family:var(--sans);font-size:1.2rem;font-weight:
 
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s8)}
 .contact-item .eyebrow{display:block;margin-bottom:var(--s2)}
-.site-footer{border-top:1px solid var(--line);padding:var(--s8) 0 var(--s12);font-size:.85rem;
+.site-footer{border-top:1px solid var(--line);padding-block:var(--s8) var(--s12);font-size:.85rem;
   color:var(--muted);display:flex;flex-wrap:wrap;gap:var(--s4);justify-content:space-between}
 .site-footer .mono{font-family:var(--mono);font-size:.76rem;letter-spacing:.05em}
 </style>
@@ -627,8 +627,8 @@ const D = {
     }
   },
   "updated": {
-    "ko": "2026. 8. 2.",
-    "en": "2 August 2026"
+    "ko": "2026. 8. 10.",
+    "en": "10 August 2026"
   },
   "publications": [
     {
