@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>김예진 | Yejin Kim</title>
+<meta name="description" content="노동법·사회보장법·인공지능법 연구자 김예진의 개인 홈페이지. 논문, 경력, 강의, 학술활동." />
+<meta property="og:title" content="김예진 | Yejin Kim" />
+<meta property="og:description" content="노동법 · 사회보장법 · 인공지능법" />
+<meta property="og:type" content="profile" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+
+<style>
+/* 제본(bookbinding)에서 가져온 팔레트: 클로스 보드, 종이, 옥스블러드 책등 */
+:root{
+  --paper:#F7F7F2; --board:#EAEBE3; --surface:#fff;
+  --ink:#1B1E1A; --ink-soft:#3C4139; --muted:#6E736A;
+  --line:#D7D9CE; --line-soft:#E6E7DF;
+  --spine:#7B2E32; --spine-hover:#5E2225; --foil:#9A7C42;
+  --sans:'Pretendard Variable',Pretendard,system-ui,sans-serif;
+  --serif:'Newsreader',Georgia,serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --nav:68px; --wide:1160px;
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s6:24px;--s8:32px;--s12:48px;--s16:64px;--s24:96px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav) + 24px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.001ms !important}}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;left:0;top:0;bottom:0;width:5px;background:var(--spine);z-index:60}
+@media (max-width:720px){body::before{width:3px}}
+
+a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line);
+  transition:color .15s,text-decoration-color .15s}
+a:hover{color:var(--spine);text-decoration-color:var(--spine)}
+:focus-visible{outline:2px solid var(--spine);outline-offset:3px;border-radius:2px}
+
+.wrap{max-width:var(--wide);margin:0 auto;padding:0 var(--s8)}
+@media (max-width:720px){.wrap{padding:0 var(--s6)}}
+.eyebrow{font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted)}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:50;height:var(--nav);background:var(--paper);
+  border-bottom:1px solid var(--line)}
+.header-inner{max-width:var(--wide);margin:0 auto;padding:0 var(--s8);height:100%;
+  display:flex;justify-content:center;align-items:center;gap:var(--s8)}
+@media (max-width:720px){.header-inner{padding:0 var(--s6)}}
+.site-nav ul{display:flex;justify-content:center;gap:var(--s8);list-style:none;margin:0;padding:0}
+.site-nav a{font-size:.92rem;font-weight:500;color:var(--muted);text-decoration:none}
+.site-nav a:hover,.site-nav a[aria-current="true"]{color:var(--ink)}
+.site-nav a[aria-current="true"]{box-shadow:inset 0 -1px 0 var(--spine)}
+@media (max-width:900px){.site-nav{display:none}}
+.lang-switch{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.1em;
+  background:none;border:1px solid var(--line);border-radius:2px;color:var(--muted);
+  padding:6px 11px;cursor:pointer;transition:.15s}
+.lang-switch:hover{border-color:var(--spine);color:var(--spine)}
+
+/* 히어로 */
+.hero{padding-block:var(--s16) var(--s12);border-bottom:1px solid var(--line-soft)}
+@media (max-width:720px){.hero{padding-block:var(--s8) var(--s6)}}
+.hero-name{font-family:var(--serif);font-weight:400;font-size:clamp(3.4rem,9vw,6.2rem);
+  line-height:1;letter-spacing:-.03em;margin:0}
+.hero-name .hanja{font-size:.34em;font-weight:400;color:var(--muted);letter-spacing:.08em;
+  vertical-align:.5em;margin-left:.4em}
+.hero-role{margin:var(--s8) 0 0;color:var(--ink-soft);font-size:1.08rem;max-width:none;
+  text-wrap:pretty}
+.hero-links{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s8)}
+.btn{font-size:.92rem;font-weight:500;padding:10px 18px;border:1px solid var(--line);
+  border-radius:2px;background:var(--surface);text-decoration:none;transition:.15s}
+.btn:hover{border-color:var(--ink)}
+.btn--primary{background:var(--spine);border-color:var(--spine);color:#fff}
+.btn--primary:hover{background:var(--spine-hover);border-color:var(--spine-hover);color:#fff}
+
+/* 섹션 */
+.section{padding-block:var(--s12);border-bottom:1px solid var(--line-soft)}
+.section:last-of-type{border-bottom:none}
+.section-head{display:flex;align-items:baseline;gap:var(--s4);margin-bottom:var(--s6)}
+.section-head h2{font-family:var(--serif);font-weight:500;font-size:2.2rem;letter-spacing:-.01em;margin:0}
+.section-head .rule{flex:1;height:1px;background:var(--line);transform:translateY(-4px)}
+
+/* 논문 연표: 연도가 왼쪽에 고정된 채 항목이 스크롤됩니다 */
+.filters{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s8)}
+.chip{font-size:.88rem;font-weight:500;padding:7px 15px;border:1px solid var(--line);
+  border-radius:99px;background:transparent;color:var(--muted);cursor:pointer;
+  font-family:var(--sans);transition:.15s}
+.chip:hover{border-color:var(--ink);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.pub-year-block{display:grid;grid-template-columns:130px 1fr;gap:0 var(--s8);
+  border-top:1px solid var(--line-soft);padding-top:var(--s4)}
+.pub-year-block:first-child{border-top:none;padding-top:0}
+.pub-year{position:sticky;top:calc(var(--nav) + 20px);align-self:start;font-family:var(--mono);
+  font-size:1.35rem;font-weight:500;color:var(--muted);padding-bottom:var(--s8)}
+@media (max-width:900px){.pub-year-block{grid-template-columns:1fr}.pub-year{position:static;padding-bottom:var(--s3)}}
+.pub-list{list-style:none;margin:0;padding:0 0 var(--s4)}
+.pub{padding:var(--s3) 0;border-bottom:1px solid var(--line-soft)}
+.pub:last-child{border-bottom:none}
+.pub-title{font-family:var(--serif);font-size:1.34rem;font-weight:500;line-height:1.32;
+  margin:0 0 var(--s1)}
+.pub-head{display:flex;align-items:baseline;gap:var(--s4)}
+.pub-head .pub-title{flex:1}
+.pub-head .pub-link,.pub-head .status{flex-shrink:0;white-space:nowrap}
+html[lang="ko"] .pub-title{font-family:var(--sans);font-size:1.2rem;font-weight:600}
+/* 제목이 나뉘어야 한다면 부제(— 뒤)에서만 끊습니다 */
+.pub-title .t-main{display:block}
+.pub-title .t-sub{display:block;font-size:.85em;font-weight:400;color:var(--ink-soft);margin-top:3px}
+.pub-meta{margin:0;font-size:.95rem;color:var(--muted)}
+.pub-tail{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s4);margin-top:var(--s3)}
+.status{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.73rem;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.status::before{content:"";width:8px;height:8px;border:1px solid var(--muted);border-radius:1px}
+.status[data-s="published"]::before{background:var(--ink);border-color:var(--ink)}
+.status[data-s="forthcoming"]::before{background:var(--foil);border-color:var(--foil)}
+.pub-link{font-family:var(--mono);font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;
+  color:#fff;text-decoration:none;background:var(--spine);border:1px solid var(--spine);
+  border-radius:2px;padding:3px 10px;transition:.15s}
+.pub-link:hover{background:var(--spine-hover);border-color:var(--spine-hover)}
+.pub-title-link{text-decoration:none;color:var(--ink)}
+.pub-title-link:hover{color:var(--spine)}
+.pub-title-link:hover .t-main{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--spine)}
+
+/* 연혁 항목 */
+.entry{display:grid;grid-template-columns:180px 1fr;gap:0 var(--s8);padding-block:var(--s3);
+  border-bottom:1px solid var(--line-soft)}
+.entry:last-child{border-bottom:none}
+@media (max-width:900px){.entry{grid-template-columns:1fr;gap:var(--s1)}}
+.entry-when{font-family:var(--mono);font-size:.9rem;color:var(--muted);padding-top:3px}
+.entry-what{font-weight:600;font-size:1.05rem}
+.entry-where{color:var(--muted);font-size:.97rem}
+.entry-note{color:var(--muted);font-size:.92rem;margin-top:var(--s1)}
+
+.cv-block + .cv-block{margin-top:var(--s8)}
+.cv-block .eyebrow{display:block;margin-bottom:var(--s4)}
+.prose{color:var(--ink-soft)}
+
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s8)}
+.contact-item .eyebrow{display:block;margin-bottom:var(--s2)}
+
+/* 스크롤 애니메이션 */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+
+/* 논문 펼치기 */
+.pub-toggle{cursor:pointer}
+.pub-toggle:hover .pub-title{color:var(--spine)}
+.pub-abstract{max-height:0;overflow:hidden;transition:max-height .4s ease,opacity .3s ease;opacity:0}
+.pub.open .pub-abstract{max-height:400px;opacity:1}
+.pub-abstract-text{padding:var(--s3) 0 var(--s4);font-size:.92rem;color:var(--ink-soft);
+  line-height:1.65;border-left:2px solid var(--foil);padding-left:var(--s4);margin-top:var(--s3)}
+.pub-expand{display:inline-flex;align-items:center;gap:3px;font-family:var(--mono);font-size:.68rem;
+  color:var(--muted);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;
+  border:1px solid var(--line);border-radius:99px;padding:2px 9px;margin-left:8px;vertical-align:middle;
+  transition:color .15s,border-color .15s,background .15s}
+.pub-expand:hover{color:var(--spine);border-color:var(--spine);background:rgba(123,46,50,.05)}
+.pub.open .pub-expand{color:var(--spine);border-color:var(--spine);background:rgba(123,46,50,.07)}
+.pub.open .pub-expand .arrow{transform:rotate(180deg)}
+.pub-expand .arrow{display:inline-block;transition:transform .3s ease;margin-left:4px}
+
+.site-footer{border-top:1px solid var(--line);padding-block:var(--s8) var(--s12);font-size:.85rem;
+  color:var(--muted);display:flex;flex-wrap:wrap;gap:var(--s4);justify-content:space-between}
+.site-footer .mono{font-family:var(--mono);font-size:.76rem;letter-spacing:.05em}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <nav class="site-nav" aria-label="Sections"><ul id="nav"></ul></nav>
+    <button class="lang-switch" id="langSwitch" type="button">ENG</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <h1 class="hero-name" id="heroName"></h1>
+    <p class="hero-role" id="heroRole"></p>
+    <div class="hero-links" id="heroLinks"></div>
+  </section>
+
+  <section class="section wrap" id="research">
+    <div class="section-head"><h2 id="h-research"></h2><div class="rule"></div></div>
+    <p class="prose" id="researchAreas"></p>
+  </section>
+
+  <section class="section wrap" id="publications">
+    <div class="section-head"><h2 id="h-publications"></h2><div class="rule"></div></div>
+    <div class="filters" id="filters" role="group"></div>
+    <div id="ledger"></div>
+  </section>
+
+  <section class="section wrap" id="cv">
+    <div class="section-head"><h2 id="h-cv"></h2><div class="rule"></div></div>
+    <div id="cvBlocks"></div>
+  </section>
+
+  <section class="section wrap" id="contact">
+    <div class="section-head"><h2 id="h-contact"></h2><div class="rule"></div></div>
+    <div class="contact-grid" id="contactGrid"></div>
+  </section>
+</main>
+
+<footer class="site-footer wrap">
+  <span id="footerName"></span>
+  <span class="mono" id="footerUpdated"></span>
+</footer>
+
+<script>
+/* 이 데이터는 cv-data.json에서 자동 생성됩니다. 직접 고치지 마세요.
+   내용을 바꾸려면 cv-data.json을 고치고 node build_site.js를 다시 실행하세요. */
+const D = {
+  "header": {
+    "name": {
+      "ko": "김예진",
+      "en": "Yejin KIM"
+    },
+    "hanja": "金睿眞",
+    "_check_hanja": "국문 이력서는 金睿眞, 영문 이력서는 金譽眞으로 되어 있었습니다. 睿로 통일했습니다.",
+    "title": {
+      "ko": "변호사 · 서울대학교 법학연구소 책임연구원",
+      "en": "Attorney-at-Law; Chief Researcher, Law Research Institute, Seoul National University"
+    },
+    "address": {
+      "ko": "서울특별시 관악구 관악로 1 서울대학교 17동 310호 (08826)",
+      "en": "Room 310, Bldg. 17, 1 Gwanak-ro, Gwanak-gu, Seoul 08826, Republic of Korea"
+    },
+    "email": "yj.kim09@snu.ac.kr / ai.yj.kim09@gmail.com",
+    "mobile": {
+      "ko": "010-9134-2573",
+      "en": "+82-10-9134-2573"
+    },
+    "emailPrimary": "ai.yj.kim09@gmail.com"
+  },
+  "displayName": {
+    "ko": "김예진",
+    "en": "Yejin Kim"
+  },
+  "researchAreas": {
+    "ko": "노동법, 사회보장법, 인공지능법, AI 복지, 개인정보, 알고리즘 관리, 산업안전보건, 장애인의 권리",
+    "en": "Labour Law; Social Security Law; Artificial Intelligence Law; AI in Social Welfare; Personal Data Protection; Algorithmic Management; Occupational Safety and Health; Rights of Persons with Disabilities"
+  },
+  "work": [
+    {
+      "org": {
+        "ko": "서울대학교 법학연구소",
+        "en": "Seoul National University, Law Research Institute"
+      },
+      "place": {
+        "ko": "서울",
+        "en": "Seoul, Korea"
+      },
+      "roles": [
+        {
+          "title": {
+            "ko": "책임연구원 (2026년 한국연구재단 인문사회학술연구교수 A유형)",
+            "en": "Senior Researcher (2026 NRF Humanities and Social Sciences Research Professor, Type A)"
+          },
+          "period": {
+            "ko": "2026. 7. – 현재",
+            "en": "July 2026 – Present"
+          }
+        }
+      ]
+    },
+    {
+      "org": {
+        "ko": "서울대학교 법학전문대학원 정책기획단",
+        "en": "Seoul National University, School of Law, Office of Policy and Planning"
+      },
+      "place": {
+        "ko": "서울",
+        "en": "Seoul, Korea"
+      },
+      "roles": [
+        {
+          "title": {
+            "ko": "변호사 (선임펠로우)",
+            "en": "Attorney-at-Law (Senior Fellow)"
+          },
+          "period": {
+            "ko": "2023. 5. – 2026. 6.",
+            "en": "May 2023 – June 2026"
+          }
+        }
+      ]
+    },
+    {
+      "org": {
+        "ko": "법무법인 신세계로",
+        "en": "Shinsegaelaw Lawfirm"
+      },
+      "place": {
+        "ko": "서울",
+        "en": "Seoul, Korea"
+      },
+      "roles": [
+        {
+          "title": {
+            "ko": "변호사",
+            "en": "Associate Attorney"
+          },
+          "period": {
+            "ko": "2021. 11. – 2023. 4.",
+            "en": "November 2021 – April 2023"
+          }
+        }
+      ]
+    },
+    {
+      "org": {
+        "ko": "주식회사 신세계푸드 법무팀",
+        "en": "Shinsegae Food Co., Ltd., Legal Team"
+      },
+      "place": {
+        "ko": "서울",
+        "en": "Seoul, Korea"
+      },
+      "roles": [
+        {
+          "title": {
+            "ko": "사내변호사 (부장)",
+            "en": "In-house Counsel (General Manager)"
+          },
+          "period": {
+            "ko": "2018. 4. – 2021. 10.",
+            "en": "April 2018 – October 2021"
+          }
+        }
+      ]
+    },
+    {
+      "org": {
+        "ko": "2018 평창 동계올림픽대회 및 동계패럴림픽대회 조직위원회 법무담당관실",
+        "en": "PyeongChang 2018 Olympic and Paralympic Winter Games Organizing Committee, Office of Legal Affairs"
+      },
+      "place": {
+        "ko": "강원",
+        "en": "Gangwon, Korea"
+      },
+      "roles": [
+        {
+          "title": {
+            "ko": "사내변호사",
+            "en": "In-house Counsel"
+          },
+          "period": {
+            "ko": "2017. 4. – 2018. 3.",
+            "en": "April 2017 – March 2018"
+          }
+        }
+      ]
+    },
+    {
+      "org": {
+        "ko": "이랜드그룹",
+        "en": "E-Land Group"
+      },
+      "place": {
+        "ko": "서울",
+        "en": "Seoul, Korea"
+      },
+      "roles": [
+        {
+          "title": {
+            "ko": "법무팀장 (이랜드파크)",
+            "en": "Head of Legal, E-Land Park"
+          },
+          "period": {
+            "ko": "2015. 12. – 2017. 3.",
+            "en": "December 2015 – March 2017"
+          }
+        },
+        {
+          "title": {
+            "ko": "사내변호사 (이랜드월드 · 이랜드리테일 · 이랜드파크)",
+            "en": "In-house Counsel (E-Land World, E-Land Retail, E-Land Park)"
+          },
+          "period": {
+            "ko": "2013. 4. – 2015. 11.",
+            "en": "April 2013 – November 2015"
+          }
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "org": {
+        "ko": "서울대학교 대학원 법학과",
+        "en": "Seoul National University, Graduate School of Law"
+      },
+      "place": {
+        "ko": "서울",
+        "en": "Seoul, Korea"
+      },
+      "degree": {
+        "ko": "법학박사 (Ph.D.)",
+        "en": "Doctor of Philosophy (Ph.D.) in Law"
+      },
+      "period": {
+        "ko": "2020. 3. – 2024. 8.",
+        "en": "March 2020 – August 2024"
+      },
+      "note": {
+        "ko": "학위논문: 「인공지능 시대의 노동과 법적 규율 — 알고리즘 관리의 투명성과 참여성을 중심으로」 (2024)",
+        "en": "Dissertation: Labour and Legal Regulation in the Era of Artificial Intelligence: Focusing on Transparency and Participation in Algorithmic Management (2024, in Korean)"
+      }
+    },
+    {
+      "org": {
+        "ko": "성균관대학교 법학전문대학원",
+        "en": "Sungkyunkwan University, Law School"
+      },
+      "place": {
+        "ko": "서울",
+        "en": "Seoul, Korea"
+      },
+      "degree": {
+        "ko": "법학전문석사 (J.D.)",
+        "en": "Juris Doctor (J.D.)"
+      },
+      "period": {
+        "ko": "2010. 3. – 2013. 2.",
+        "en": "March 2010 – February 2013"
+      }
+    },
+    {
+      "org": {
+        "ko": "연세대학교 영어영문학과",
+        "en": "Yonsei University, Department of English Language and Literature"
+      },
+      "place": {
+        "ko": "서울",
+        "en": "Seoul, Korea"
+      },
+      "degree": {
+        "ko": "문학사 (B.A.)",
+        "en": "Bachelor of Arts (B.A.)"
+      },
+      "period": {
+        "ko": "2005. 3. – 2010. 2.",
+        "en": "March 2005 – February 2010"
+      }
+    }
+  ],
+  "admission": [
+    {
+      "title": {
+        "ko": "변호사 자격 취득 (대한민국)",
+        "en": "Admitted to the Korean Bar"
+      },
+      "period": {
+        "ko": "2013",
+        "en": "2013"
+      }
+    }
+  ],
+  "teaching": [
+    {
+      "org": {
+        "ko": "서울대학교",
+        "en": "Seoul National University"
+      },
+      "roles": [
+        {
+          "title": {
+            "ko": "강사, 노동법기본연구(인공지능과 노동법)",
+            "en": "Lecturer, Principles of Labor Law (Artificial Intelligence and Labor Law)"
+          },
+          "period": {
+            "ko": "2026. 9. – 현재",
+            "en": "September 2026 – Present"
+          }
+        }
+      ]
+    },
+    {
+      "org": {
+        "ko": "인제대학교",
+        "en": "Inje University"
+      },
+      "roles": [
+        {
+          "title": {
+            "ko": "강사, 노동법 I · II",
+            "en": "Lecturer, Labor Law I & II"
+          },
+          "period": {
+            "ko": "2026. 3. – 현재",
+            "en": "March 2026 – Present"
+          }
+        }
+      ]
+    }
+  ],
+  "memberships": [
+    {
+      "title": {
+        "ko": "한국고용노사관계학회 이사",
+        "en": "Member of the Board of Directors, Korean Labor and Employment Relations Association"
+      },
+      "period": {
+        "ko": "2026. 7. – 현재",
+        "en": "July 2026 – Present"
+      }
+    },
+    {
+      "title": {
+        "ko": "서울대학교 노동법연구회 국제이사",
+        "en": "Director of International Affairs, Seoul National University Society of Labour Law"
+      },
+      "period": {
+        "ko": "2026. 2. – 현재",
+        "en": "February 2026 – Present"
+      }
+    },
+    {
+      "title": {
+        "ko": "한국디지털사회복지학회 디지털복지국가분과 위원",
+        "en": "Member, Digital Welfare State Subcommittee, Korean Digital Social Welfare Association"
+      },
+      "period": {
+        "ko": "2026. 1. – 현재",
+        "en": "January 2026 – Present"
+      }
+    },
+    {
+      "title": {
+        "ko": "한국고용노사관계학회 총무간사",
+        "en": "General Affairs Secretary, Korean Labor and Employment Relations Association"
+      },
+      "period": {
+        "ko": "2025. 7. – 2026. 6.",
+        "en": "July 2025 – June 2026"
+      }
+    },
+    {
+      "title": {
+        "ko": "서울대학교 사회보장법연구회 국제간사",
+        "en": "Coordinator of International Affairs, Seoul National University Society of Social Security Law"
+      },
+      "period": {
+        "ko": "2025. 2. – 현재",
+        "en": "February 2025 – Present"
+      }
+    },
+    {
+      "title": {
+        "ko": "한국인공지능법학회 회원",
+        "en": "Member, Korean Association for Artificial Intelligence and Law"
+      },
+      "_check_period": "국문 원본 2025. 1. / 영문 원본 Oct. 2024. 국문 기준으로 통일했습니다.",
+      "period": {
+        "ko": "2025. 1. – 현재",
+        "en": "January 2025 – Present"
+      }
+    },
+    {
+      "title": {
+        "ko": "서울대학교 노동법연구회 회원",
+        "en": "General Member, Seoul National University Society of Labour Law"
+      },
+      "period": {
+        "ko": "2020. 3. – 현재",
+        "en": "March 2020 – Present"
+      }
+    }
+  ],
+  "languages": {
+    "ko": "한국어, 영어, 일본어",
+    "en": "Korean (native); English; Japanese"
+  },
+  "labels": {
+    "researchAreas": {
+      "ko": "연구 분야",
+      "en": "Research Areas"
+    },
+    "work": {
+      "ko": "경력 사항",
+      "en": "Work Experience"
+    },
+    "education": {
+      "ko": "학력 사항",
+      "en": "Education"
+    },
+    "admission": {
+      "ko": "자격",
+      "en": "Bar Admission"
+    },
+    "teaching": {
+      "ko": "강의 경력",
+      "en": "Teaching Experience"
+    },
+    "publications": {
+      "ko": "연구 실적",
+      "en": "Publications"
+    },
+    "dissertation": {
+      "ko": "학위논문",
+      "en": "Doctoral Dissertation"
+    },
+    "articles": {
+      "ko": "학술논문",
+      "en": "Journal Articles"
+    },
+    "reports": {
+      "ko": "연구보고서",
+      "en": "Research Reports"
+    },
+    "caseNotes": {
+      "ko": "판례평석",
+      "en": "Case Notes"
+    },
+    "memberships": {
+      "ko": "학술 활동",
+      "en": "Professional Memberships and Activities"
+    },
+    "languages": {
+      "ko": "언어",
+      "en": "Languages"
+    },
+    "updated": {
+      "ko": "최종 수정",
+      "en": "Updated"
+    },
+    "contact": {
+      "ko": "연락처",
+      "en": "Contact"
+    },
+    "status_published": {
+      "ko": "게재",
+      "en": "Published"
+    },
+    "status_forthcoming": {
+      "ko": "발간 예정",
+      "en": "Forthcoming"
+    },
+    "all": {
+      "ko": "전체",
+      "en": "All"
+    },
+    "link_hint": {
+      "ko": "원문 보기",
+      "en": "Full text"
+    },
+    "main": {
+      "ko": "메인",
+      "en": "Main"
+    }
+  },
+  "updated": {
+    "ko": "2026. 9. 10.",
+    "en": "10 September 2026"
+  },
+  "publications": [
+    {
+      "type": "article",
+      "year": 2026,
+      "status": "published",
+      "title": {
+        "ko": "「인공지능에 의한 사회적 평점의 요건과 사례 — EU 인공지능법과 한국 인공지능기본법의 비교」",
+        "en": "Requirements and Cases of Social Scoring by Artificial Intelligence: Comparing the EU AI Act and the Korean AI Framework Act"
+      },
+      "venue": {
+        "ko": "법조 통권 제776호",
+        "en": "Bupjo (Korean Lawyers Association Journal), No. 776"
+      },
+      "date": {
+        "ko": "2026. 4.",
+        "en": "2026, in Korean"
+      },
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003336005",
+      "abstract": {
+        "ko": "본 논문은 EU 인공지능법 상 '금지되는 인공지능 관행'으로 규정된 '사회적 평점(Social Scoring)'의 정의, 성립 요건 및 사례를 분석하였다. 인공지능에 의한 사회적 평점은 과도한 데이터 수집과 자동화된 추론을 통해 인간의 존엄성, 차별금지권, 사생활 보호권 등 헌법상 기본권을 침해하고 감시사회를 초래할 수 있다. AMAS 알고리즘과 SCHUFA 알고리즘 사례는 사회적 평점이 개인에게 미칠 수 있는 문제점을 보여준다. 이에 대응하여 EU 인공지능법은 사회적 평점의 요건을 규정한다. 본 논문은 사회적 평점을 비롯한 금지되는 인공지능 관행 규정을 도입할 것을 제언한다.",
+        "en": "This study analyzes 'Social Scoring' practices classified as prohibited artificial intelligence practices under the European Union's Regulation (EU) 2024/1689(EU AI Act), with the aim of deriving legislative implications for South Korea. As AI technology becomes ubiquitous, AI-driven social scoring poses significant risks to fundamental rights—including human dignity, the right to non-discrimination, and privacy—by utilizing excessive data collection and automated inference used to evaluate individuals. This paper proposes the introduction of explicit regulations prohibiting social scoring within the Korean legal framework."
+      },
+      "linkLabel": "KCI"
+    },
+    {
+      "type": "article",
+      "year": 2026,
+      "status": "published",
+      "title": {
+        "ko": "「인공지능과 산업안전보건 — 유럽의 대응과의 비교를 중심으로」",
+        "en": "Artificial Intelligence and Occupational Safety and Health: A Comparative Analysis with European Regulatory Approaches"
+      },
+      "venue": {
+        "ko": "노동법연구 제60호",
+        "en": "Seoul National University Labour Law Review, No. 60"
+      },
+      "date": {
+        "ko": "2026. 3.",
+        "en": "2026, in Korean"
+      },
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003319453",
+      "abstract": {
+        "ko": "인공지능 기술의 발전 및 알고리즘 관리 시스템의 확산은 생산성 향상의 이면에 노동자에 대한 물리적, 정신적·정서적 위험뿐 아니라 디지털·데이터 기반 위험의 증가라는 새로운 차원의 산업안전보건 문제를 야기하고 있다. 본 연구는 EU 산업안전보건 기본 지침, 인공지능법, 플랫폼 노동 지침, 기계류 규정 등 EU 법제를 비교법적으로 검토하여 국내 법제의 향후 입법적 개선 방향을 모색하였다.",
+        "en": "The advancement of artificial intelligence technologies and the increase of use algorithmic management systems have given rise to a new dimension of occupational safety and health concerns. This study undertakes a comparative legal analysis of key EU legislative instruments — including the EU AI Act, the Platform Work Directive, the Framework Directive on Safety and Health at Work, and the Machinery Regulation — in order to explore directions for future legislative reform in Korea."
+      },
+      "linkLabel": "KCI"
+    },
+    {
+      "type": "article",
+      "year": 2025,
+      "status": "published",
+      "title": {
+        "ko": "「장애인의 인공지능 접근성에 대한 소고」",
+        "en": "A Study on the Accessibility of Artificial Intelligence for Persons with Disabilities"
+      },
+      "venue": {
+        "ko": "사회보장법연구 제14권 제1호",
+        "en": "Seoul National University Social Security Law Review, Vol. 14, No. 1"
+      },
+      "date": {
+        "ko": "2025. 6.",
+        "en": "2025, in Korean"
+      },
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003222649",
+      "abstract": {
+        "ko": "인공지능이 보조도구로써 장애인의 활동에 많은 진척을 가져왔으나, 다양한 인공지능 서비스와 제품 그 자체에 장애인이 동등하게 접근하고 활용할 수 있는지에 대해서는 아직 많은 검토가 있지 아니하였다. 본 논문은 현행 법제가 인공지능에 대한 장애인의 접근성을 어디까지 보장하고 있는지에 대한 선제적 검토를 수행하고, 민간기업에까지 의무화, 접근성 적용 범위를 인공지능 시스템 전반으로 확대, 장애인 등 이해관계자 참여를 통한 인공지능 접근성 표준 요건 정립을 제안한다.",
+        "en": "While AI has brought significant progress as an assistive tool for persons with disabilities, there has been limited review of whether persons with disabilities can equally access and use AI services and products themselves. This paper conducts a preemptive review of the extent to which current legislation guarantees accessibility of AI for persons with disabilities, proposing to expand accessibility obligations to private sectors and establish AI accessibility standards through stakeholder participation."
+      },
+      "linkLabel": "KCI"
+    },
+    {
+      "type": "article",
+      "year": 2025,
+      "status": "published",
+      "title": {
+        "ko": "「EU의 인공지능법과 플랫폼 노동 지침상 알고리즘 관리의 규율」",
+        "en": "Regulation of Algorithmic Management under the EU AI Act and the Platform Work Directive"
+      },
+      "venue": {
+        "ko": "노동법학 제93호",
+        "en": "Journal of Labour Law, No. 93"
+      },
+      "date": {
+        "ko": "2025. 3.",
+        "en": "2025, in Korean"
+      },
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003183313",
+      "abstract": {
+        "ko": "인공지능의 급속한 발전과 이로 인한 디지털 혁명의 진전으로 알고리즘 관리가 디지털 노동 플랫폼을 넘어 일반 직장으로 확대되고 있다. 본 연구는 인공지능 윤리로부터 도출된 투명성과 참여성 요건이 알고리즘 관리에 적절히 대응할 수 있는지를 EU의 GDPR, AI Act, 플랫폼 노동 지침, 스페인의 노동자헌장법, 독일의 종업원평의회법을 검토하였다. 우리나라의 노동조합법과 근로자참여법은 인공지능의 기업 내 도입 및 활용에 대한 근로자의 정보권과 참여를 보장하는 데 한계가 있으며, 앞으로 알고리즘 관리에 대한 노무제공자의 보호 및 참여 절차 통합적 기준을 마련할 필요가 있다.",
+        "en": "With the advancement of AI technology and the progression of digital transformation, algorithmic management is expanding beyond digital labor platforms into traditional work environments. This study examines the adequacy of algorithmic management regulation through a comparative analysis of the EU AI Act and Platform Work Directive, focusing on transparency and participation requirements. The findings provide a foundational framework for establishing integrated regulatory standards for algorithmic management in South Korea."
+      },
+      "linkLabel": "KCI"
+    },
+    {
+      "type": "article",
+      "year": 2024,
+      "status": "published",
+      "title": {
+        "ko": "「독일 종업원평의회법상 인공지능의 규율 — 독일 인공지능 조사위원회 최종보고서와 종업원평의회 현대화법을 중심으로」",
+        "en": "Regulation of Artificial Intelligence under the German Works Constitution Act: Focusing on the Final Report of the German Study Commission on Artificial Intelligence and the Works Council Modernisation Act"
+      },
+      "venue": {
+        "ko": "노동법연구 제57호",
+        "en": "Seoul National University Labour Law Review, No. 57"
+      },
+      "date": {
+        "ko": "2024. 9.",
+        "en": "2024, in Korean"
+      },
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003122704",
+      "abstract": {
+        "ko": "본 논문은 인공지능(AI)의 도입 및 활용에 관한 독일 종업원평의회법상의 규율에 대해 검토한다. 2021년 독일 인공지능 조사위원회의 최종보고서는 기존의 종업원평의회법이 직장 내 인공지능 도입에 한계가 있음을 인정하고 현대화를 제안하였다. 개정된 종업원평의회법은 전문가 자문 권한의 확대, 정보제공 의무와 협의권의 명시, 인공지능에 의한 인력선발 기본지침에 대한 공동결정권의 강화 등을 통해 노동자 참여를 실질화하였다.",
+        "en": "This paper analyzes the introduction and use of artificial intelligence under the German Works Councils Act. The 2021 Final Report of the German Commission of Inquiry on AI acknowledged the limitations of the existing Act and proposed its modernization. The amended Act strengthened works councils' powers including expanded expert consultation authority, clarified information obligations, and enhanced co-determination rights on AI-based personnel selection guidelines."
+      },
+      "linkLabel": "KCI"
+    },
+    {
+      "type": "article",
+      "year": 2023,
+      "status": "published",
+      "title": {
+        "ko": "「채용절차에 있어서 인공지능의 차별 문제 — 미국과 한국의 비교를 중심으로」",
+        "en": "Discrimination by Artificial Intelligence in the Hiring Process: A Comparison between the United States and Korea"
+      },
+      "venue": {
+        "ko": "노동법연구 제55호",
+        "en": "Seoul National University Labour Law Review, No. 55"
+      },
+      "date": {
+        "ko": "2023. 9.",
+        "en": "2023, in Korean"
+      },
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002999976",
+      "abstract": {
+        "ko": "인간의 편견에 대한 불신과 이를 극복할 대안으로 급부상한 인공지능의 빠른 발전에 더하여 전 세계적인 코로나19의 확산은 인공지능의 노동 세계의 침투를 더욱 가속화하였다. 그러나 아마존의 인공지능 채용툴의 여성 차별적 사례 등을 통해 인공지능에 의한 판단이 오히려 차별을 확산시킬 우려가 확대되었다. 단순한 관련 법의 제정을 넘어서 인공지능 채용으로 인해 발생할 수 있는 차별의 심도 깊은 연구 및 이를 어떠한 방식으로 규제할 수 있는지에 대한 연구의 필요성을 제안한다.",
+        "en": "In addition to the rapid development of AI as an alternative to overcome human prejudice, the spread of COVID-19 has further accelerated the penetration of AI into the labor world. However, cases such as Amazon's discriminatory AI recruitment tool have raised growing concerns that AI judgments may spread discrimination. This paper proposes the need for in-depth study of discrimination arising from AI employment and research on how to regulate it."
+      },
+      "linkLabel": "KCI"
+    },
+    {
+      "type": "article",
+      "year": 2022,
+      "status": "published",
+      "title": {
+        "ko": "「인공지능에 의한 자동화된 의사결정의 위험성 — 장애인 채용을 중심으로」",
+        "en": "Risks of Automated Decision-Making by Artificial Intelligence: Focusing on the Employment of Persons with Disabilities"
+      },
+      "venue": {
+        "ko": "Law & Technology 제18권 제1호",
+        "en": "Law & Technology, Vol. 18, No. 1"
+      },
+      "date": {
+        "ko": "2022. 1.",
+        "en": "2022, in Korean"
+      },
+      "url": "",
+      "abstract": null,
+      "linkLabel": ""
+    },
+    {
+      "type": "report",
+      "year": 2026,
+      "status": "forthcoming",
+      "title": {
+        "ko": "「AI 복지돌봄 혁신 로드맵 수립 기초연구」",
+        "en": "A Preliminary Study on an Innovation Roadmap for AI-Based Welfare and Care Services"
+      },
+      "venue": {
+        "ko": "한국보건사회연구원",
+        "en": "Korea Institute for Health and Social Affairs"
+      },
+      "date": {
+        "ko": "발간 예정, 5인 공저",
+        "en": "forthcoming, co-authored (5 authors), in Korean"
+      },
+      "url": "",
+      "abstract": null,
+      "linkLabel": ""
+    },
+    {
+      "type": "report",
+      "year": 2025,
+      "status": "published",
+      "title": {
+        "ko": "「인공지능과 노사관계의 변화와 쟁점」",
+        "en": "Artificial Intelligence and Industrial Relations: Emerging Changes and Key Issues"
+      },
+      "venue": {
+        "ko": "한국노동연구원",
+        "en": "Korea Labor Institute"
+      },
+      "date": {
+        "ko": "2025. 12., 4인 공저",
+        "en": "2025, co-authored (4 authors), in Korean"
+      },
+      "url": "https://www.kli.re.kr/kli/newestPblctView.es?pblct_sn=10269&mid=a10101000000",
+      "abstract": null,
+      "linkLabel": "KLI"
+    },
+    {
+      "type": "report",
+      "year": 2025,
+      "status": "published",
+      "title": {
+        "ko": "「산업별·직무별 AI 전환사례 및 부작용 심층조사」",
+        "en": "In-depth Study on Cases and Side Effects of AI Transition by Industry and Occupation"
+      },
+      "venue": {
+        "ko": "고용노동부",
+        "en": "Ministry of Employment and Labor"
+      },
+      "date": {
+        "ko": "2025. 12., 2인 공저",
+        "en": "2025, co-authored (2 authors), in Korean"
+      },
+      "url": "",
+      "abstract": null,
+      "linkLabel": ""
+    },
+    {
+      "type": "caseNote",
+      "year": 2026,
+      "status": "published",
+      "title": {
+        "ko": "「위임계약 형식으로 근무하는 생활가전 방문점검·판매 인력의 근로기준법상 근로자성 — 부산지방법원 2026. 1. 29. 선고 2024가합44231 판결」",
+        "en": "Employee Status under the Labor Standards Act of Home-Appliance Inspection and Sales Workers Engaged under Mandate Contracts: Busan District Court, Judgment of 29 January 2026, 2024GaHap44231"
+      },
+      "venue": {
+        "ko": "노동판례리뷰, 한국노동연구원",
+        "en": "Labour Case Review, Korea Labor Institute"
+      },
+      "date": {
+        "ko": "2026. 4.",
+        "en": "2026, in Korean"
+      },
+      "url": "https://www.kli.re.kr/kli/prcdntView.es?&prcdnt_no=138104&mid=a10202000000",
+      "abstract": null,
+      "linkLabel": "KLI"
+    },
+    {
+      "type": "dissertation",
+      "year": 2024,
+      "status": "published",
+      "title": {
+        "ko": "「인공지능 시대의 노동과 법적 규율 — 알고리즘 관리의 투명성과 참여성을 중심으로」",
+        "en": "Labour and Legal Regulation in the Era of Artificial Intelligence: Focusing on Transparency and Participation in Algorithmic Management"
+      },
+      "venue": {
+        "ko": "서울대학교 법학박사 학위논문",
+        "en": "Ph.D. Dissertation, Seoul National University Graduate School of Law"
+      },
+      "date": {
+        "ko": "2024",
+        "en": "2024, in Korean"
+      },
+      "url": "https://dcollection.snu.ac.kr/srch/srchDetail/000000185116",
+      "abstract": null,
+      "linkLabel": "S-SPACE"
+    }
+  ],
+  "cvFiles": {
+    "ko": "CV_김예진_국문_online_ver.pdf",
+    "en": "CV_Yejin_Kim_English_online_ver.pdf"
+  }
+};
+
+let lang = "ko";
+let filter = "all";
+const $ = (s) => document.querySelector(s);
+const t = (o) => (o && typeof o === "object" && ("ko" in o) ? o[lang] : o);
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const L = (k) => t(D.labels[k]);
+
+const NAV = [
+  ["top", "main"],
+  ["research", "researchAreas"],
+  ["publications", "publications"],
+  ["cv", "work"],
+  ["contact", "contact"]
+];
+
+const PUB_FILTERS = [
+  ["all", "all"], ["article", "articles"], ["report", "reports"], ["caseNote", "caseNotes"]
+];
+
+function render(){
+  document.documentElement.lang = lang;
+  document.title = lang === "ko" ? "김예진 | Yejin Kim" : "Yejin Kim | 김예진";
+
+  $("#langSwitch").textContent = lang === "ko" ? "ENG" : "KOR";
+  $("#langSwitch").setAttribute("aria-label", lang === "ko" ? "View in English" : "한국어로 보기");
+
+  $("#nav").innerHTML = NAV.map(([id, key]) =>
+    `<li><a href="#${id}">${esc(L(key))}</a></li>`).join("");
+
+  $("#heroName").innerHTML = lang === "ko"
+    ? esc(t(D.displayName)) + ' <span class="hanja">' + esc(D.header.hanja) + '</span>'
+    : esc(t(D.displayName));
+  $("#heroRole").textContent = t(D.header.title);
+
+  $("#heroLinks").innerHTML = [
+    { label: lang === "ko" ? "국문 이력서 내려받기" : "Curriculum Vitae (Korean)", href: D.cvFiles.ko, primary: lang === "ko" },
+    { label: lang === "ko" ? "영문 이력서 내려받기" : "Curriculum Vitae (English)", href: D.cvFiles.en, primary: lang !== "ko" },
+    { label: lang === "ko" ? "이메일" : "Email", href: "mailto:" + D.header.emailPrimary }
+  ].map(l => `<a class="btn${l.primary ? " btn--primary" : ""}" href="${esc(encodeURI(l.href))}" ${l.href.endsWith(".pdf") ? "download target=\"_blank\" rel=\"noopener\"" : ""}>${esc(l.label)}</a>`).join("");
+
+  $("#h-research").textContent = L("researchAreas");
+  $("#researchAreas").textContent = t(D.researchAreas);
+
+  $("#h-publications").textContent = L("publications");
+  $("#filters").innerHTML = PUB_FILTERS.map(([key, label]) =>
+    `<button class="chip" type="button" data-filter="${key}" aria-pressed="${key === filter}">${esc(L(label))}</button>`).join("");
+  renderLedger();
+
+  $("#h-cv").textContent = lang === "ko" ? "이력" : "Curriculum Vitae";
+  renderCv();
+
+  $("#h-contact").textContent = L("contact");
+  $("#contactGrid").innerHTML = [
+    { label: lang === "ko" ? "이메일" : "Email", value: D.header.email.replace(/ \/ /g, "<br>") },
+    { label: lang === "ko" ? "연구실" : "Office", value: t(D.header.address) },
+    { label: L("languages"), value: t(D.languages) }
+  ].map(c => `<div class="contact-item"><span class="eyebrow">${esc(c.label)}</span><span>${c.value}</span></div>`).join("");
+
+  $("#footerName").textContent = (lang === "ko" ? "© 2026 김예진" : "© 2026 Yejin Kim");
+  $("#footerUpdated").textContent = L("updated") + " " + t(D.updated);
+}
+
+/** 「」를 벗기고 본제목과 부제로 나눕니다. 부제 구분자는 국문 —, 영문 : */
+function splitTitle(raw){
+  let str = String(raw == null ? "" : raw).replace(/^[「『]/, "").replace(/[」』]$/, "").trim();
+  const m = str.match(/\s[—―]\s|:\s/);
+  if (!m) return { main: str, sub: "", dash: false };
+  const dash = /[—―]/.test(m[0]);
+  const main = str.slice(0, m.index).trim();
+  const sub = str.slice(m.index + m[0].length).replace(/[—―]\s*$/, "").trim();
+  return { main: dash ? main : main + ":", sub, dash };
+}
+
+function renderLedger(){
+  const list = D.publications.filter(p => filter === "all" || p.type === filter);
+  const years = [...new Set(list.map(p => p.year))].sort((a,b) => b - a);
+  $("#ledger").innerHTML = years.map(y => `
+    <section class="pub-year-block">
+      <div class="pub-year">${y}</div>
+      <ul class="pub-list">
+        ${list.filter(p => p.year === y).map(p => {
+          const s = splitTitle(t(p.title));
+          const titleHtml = `<span class="t-main">${esc(s.main)}</span>` +
+            (s.sub ? `<span class="t-sub">${s.dash ? "— " : ""}${esc(s.sub)}</span>` : "");
+          const titleInner = p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener" class="pub-title-link" onclick="event.stopPropagation()">${titleHtml}</a>` : titleHtml;
+          const badge = p.url
+            ? `<a class="pub-link" href="${esc(p.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${esc(p.linkLabel)}</a>`
+            : (p.status === "forthcoming" ? `<span class="status" data-s="forthcoming">${esc(L("status_forthcoming"))}</span>` : "");
+          return `<li class="pub">
+            <div class="pub-toggle" onclick="this.closest('.pub').classList.toggle('open')">
+              <div class="pub-head"><h3 class="pub-title">${titleInner}</h3>${badge}</div>
+              <p class="pub-meta">${esc(t(p.venue))} · ${esc(t(p.date))}${p.abstract ? ` <span class="pub-expand">${lang === "ko" ? "초록" : "abstract"} <span class="arrow">▾</span></span>` : ""}</p>
+            </div>
+            ${p.abstract ? `<div class="pub-abstract"><div class="pub-abstract-text">${esc(t(p.abstract))}</div></div>` : ""}
+          </li>`;
+        }).join("")}
+      </ul>
+    </section>`).join("");
+}
+
+function renderCv(){
+  const rows = (items) => items.map(e => `
+    <div class="entry">
+      <div class="entry-when">${esc(e.when)}</div>
+      <div class="entry-row-main"><span class="entry-what">${esc(e.what)}</span>${e.where ? `<span class="entry-where"> / ${esc(e.where)}</span>` : ""}${e.note ? `<div class="entry-note">${esc(e.note)}</div>` : ""}</div>
+    </div>`).join("");
+
+  const flatten = (groups) => groups.flatMap(g =>
+    g.roles.map(r => ({ when: t(r.period), what: t(r.title), where: t(g.org) })));
+
+  const blocks = [
+    { label: L("work"), items: flatten(D.work) },
+    { label: L("teaching"), items: flatten(D.teaching) },
+    { label: L("education"), items: D.education.map(e => ({
+        when: t(e.period), what: t(e.degree), where: t(e.org), note: e.note ? t(e.note) : null })) },
+    { label: L("admission"), items: D.admission.map(a => ({ when: t(a.period), what: t(a.title) })) },
+    { label: L("memberships"), items: D.memberships.map(m => ({ when: t(m.period), what: t(m.title) })) }
+  ];
+
+  $("#cvBlocks").innerHTML = blocks
+    .filter(b => b.items.length)          // 비면 제목까지 함께 사라집니다
+    .map(b => `<div class="cv-block"><span class="eyebrow">${esc(b.label)}</span>${rows(b.items)}</div>`)
+    .join("");
+}
+
+$("#langSwitch").addEventListener("click", () => { lang = lang === "ko" ? "en" : "ko"; render(); });
+$("#filters").addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-filter]");
+  if (!btn) return;
+  filter = btn.dataset.filter;
+  document.querySelectorAll("[data-filter]").forEach(b =>
+    b.setAttribute("aria-pressed", String(b.dataset.filter === filter)));
+  renderLedger();
+});
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(en => { if (!en.isIntersecting) return;
+    document.querySelectorAll(".site-nav a").forEach(a =>
+      a.setAttribute("aria-current", String(a.getAttribute("href") === "#" + en.target.id))); });
+}, { rootMargin: "-20% 0px -70% 0px" });
+
+render();
+document.querySelectorAll("main section[id]").forEach(s => io.observe(s));
+
+// 스크롤 애니메이션
+const reveal = new IntersectionObserver((entries) => {
+  entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("visible"); } });
+}, { threshold: 0.08 });
+document.querySelectorAll(".section-head, .pub-year-block, .cv-block, .entry, .contact-item, .hero-name, .hero-role, .hero-links").forEach((el, i) => {
+  el.classList.add("reveal");
+  if (i % 3 === 1) el.classList.add("reveal-delay-1");
+  if (i % 3 === 2) el.classList.add("reveal-delay-2");
+  reveal.observe(el);
+});
+</script>
+</body>
+</html>
